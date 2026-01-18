@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>🔥 سكسي عراقي 🔥</title>
+
+<style>
+body {
+  background:black;
+  color:red;
+  text-align:center;
+}
+
+h1 {
+  text-shadow: 0 0 10px red;
+}
+
+video {
+  width:300px;
+  margin:10px;
+  border:3px solid red;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🔥 سكسي عراقي 🔥</h1>
+
+<form method="POST" enctype="multipart/form-data">
+  <input type="file" name="video" accept="video/*">
+  <button type="submit">رفع الفيديو</button>
+</form>
+
+<hr>
+
+{% for v in videos %}
+<video controls>
+  <source src="{{ url_for('static', filename='videos/' + v) }}">
+</video>
+{% endfor %}
+
+</body>
+</html>
